@@ -1,0 +1,2753 @@
+body {
+  margin: auto;
+  margin-top: 65vh;
+  width: 450px;
+  background: #cfdef3;
+  font-family: 'Cutive Mono', monospace;
+  color: #263238;
+}
+
+#title {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 35px;
+  font-family: 'Bungee Shade', cursive;
+  /* font-family: 'Bungee Outline', cursive; */
+  font-size: 3rem;
+  color: #6E64E7;
+}
+
+@media (max-height: 665px) {
+  #title {
+    display: none;
+  }
+}
+
+form {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+select {
+  width: 220px;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  margin-right: 10px;
+  padding: 2px 0 2px 3px;
+  opacity: 70%;
+}
+
+button {
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 10px 4px 10px;
+  background: #6E64E7;
+  color: #FFF;
+}
+
+.output {
+  text-align: center;
+  font-style: italic;
+  color: #6E64E7;
+}
+
+#instructions-one {
+  display: flex;
+  justify-content: center;
+}
+
+#instructions-two {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3px;
+  margin-top: 3px;
+  width: 45px;
+  height: 30px;
+  color: #6E64E7;
+  border: 1px solid #6E64E7;
+  border-radius: 5px;
+  animation-name: appear;
+  animation-duration: 5s;
+}
+
+/* .arrow:hover {
+  transition: ease-in 300ms;
+  background-color: #6E64E7;
+  color: #FFF;
+  cursor: pointer;
+} */
+
+@keyframes appear{
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* BEGIN Styling of the Avatar Features */
+.circle,
+.head,
+.hair-1, 
+.hair-2, 
+.hair-3, 
+.hair-4, 
+.hair-5, 
+.hair-6, 
+.hair-7,
+.face-1,
+.face-2,
+.face-3,
+.face-4,
+.face-5,
+.face-6,
+.face-7,
+.face-features,
+.glasses-1, 
+.glasses-2, 
+.glasses-3, 
+.glasses-4, 
+.glasses-5, 
+.glasses-6, 
+.glasses-7,
+.eyebrows-1, 
+.eyebrows-2, 
+.eyebrows-3, 
+.eyebrows-4, 
+.eyebrows-5, 
+.eyebrows-6, 
+.eyebrows-7,
+.eyes, 
+.eyes-1, 
+.eyes-2, 
+.eyes-3, 
+.eyes-4, 
+.eyes-5, 
+.eyes-6, 
+.eyes-7,
+.ears-1, 
+.ears-2, 
+.ears-3, 
+.ears-4, 
+.ears-5, 
+.ears-6, 
+.ears-7,
+.earrings-1, 
+.earrings-2, 
+.earrings-3, 
+.earrings-4,
+.earrings-5, 
+.earrings-6, 
+.earrings-7,
+.nose-1, 
+.nose-2, 
+.nose-3, 
+.nose-4, 
+.nose-5, 
+.nose-6, 
+.nose-7,
+.mouth, 
+.mouth-1, 
+.mouth-2, 
+.mouth-3, 
+.mouth-4, 
+.mouth-5, 
+.mouth-6, 
+.mouth-7,
+.facial-hair-1, 
+.facial-hair-2, 
+.facial-hair-3, 
+.facial-hair-4,
+.facial-hair-5, 
+.facial-hair-6, 
+.facial-hair-7,
+.blush-1,
+.blush-2,
+.blush-3,
+.blush-4,
+.blush-5,
+.blush-6,
+.blush-7,
+.neck,
+.necklace-1, 
+.necklace-2, 
+.necklace-3, 
+.necklace-4, 
+.necklace-5, 
+.necklace-6, 
+.necklace-7, 
+.body-1, 
+.body-2, 
+.body-3, 
+.body-4, 
+.body-5, 
+.body-6, 
+.body-7 {
+  position: absolute;
+}
+
+.circle {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 120px;
+  right: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  background: #E1F5FE;
+  border-radius: 50%;
+  clip-path: circle(125px at center);
+}
+
+/* ------------------------- HAIR OPTIONS BEGIN */
+
+.hair-1 {
+  display: block;
+  background: #546E7A;
+}
+.hair-2,
+.hair-3,
+.hair-4,
+.hair-5,
+.hair-6,
+.hair-7 {
+  display: none;
+  background: #546E7A;
+}
+
+/* Bald */
+#hair-bald {
+  left: 70px;
+  top: 55px;
+  width: 110px;
+  height: 60px;
+  border-radius: 50% 50% 0 0;
+}
+/* Balding Group */
+#hair-balding {
+  left: 70px;
+  top: 35px;
+  width: 110px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+#hair-balding-receed {
+  z-index: 4;
+  left: 30px;
+  top: 2px;
+  width: 50px;
+  height: 20px;
+  border-radius: 50%;
+}
+/* Short Hair Group */
+#hair-short {
+  left: 70px;
+  top: 35px;
+  width: 110px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+#hair-short-bangs-one {
+  z-index: 4;
+  left: 18px;
+  top: 10px;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+
+#hair-short-bangs-two {
+  z-index: 4;
+  left: 45px;
+  top: 15px;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+/* Shaggy Hair Group */
+#hair-shaggy {
+  left: 70px;
+  top: 35px;
+  width: 110px;
+  height: 120px;
+  border-radius: 50% 50% 5% 5%;
+}
+
+#hair-shaggy-bangs-one {
+  z-index: 4;
+  left: 5px;
+  top: 17px;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(-35deg);
+}
+
+#hair-shaggy-bangs-two {
+  z-index: 4;
+  left: 35px;
+  top: 15px;
+  width: 70px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(25deg);
+}
+
+#hair-shaggy-bangs-three {
+  z-index: 4;
+  left: 35px;
+  top: 15px;
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+#hair-shaggy-sideburn-left {
+  z-index: 4;
+  top: 60px;
+  width: 5px;
+  height: 25px;
+  border-radius: 0 0 0 90%;
+}
+
+#hair-shaggy-sideburn-right {
+  z-index: 4;
+  left: 105px;
+  top: 60px;
+  width: 5px;
+  height: 25px;
+  border-radius: 0 0 90% 0;
+}
+/* Long Hair Group */
+#hair-long {
+  left: 65px;
+  top: 35px;
+  width: 120px;
+  height: 160px;
+  border-radius: 50% 50% 0 0;
+}
+
+#hair-long-bangs-one {
+  z-index: 4;
+  top: 17px;
+  width: 70px;
+  height: 35px;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+
+#hair-long-bangs-two {
+  z-index: 4;
+  left: 50px;
+  top: 17px;
+  width: 70px;
+  height: 35px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+#hair-long-sideburn-left {
+  z-index: 4;
+  left: 5px;
+  top: 60px;
+  width: 5px;
+  height: 25px;
+  border-radius: 0 0 0 90%;
+}
+
+#hair-long-sideburn-right {
+  z-index: 4;
+  left: 110px;
+  top: 60px;
+  width: 5px;
+  height: 25px;
+  border-radius: 0 0 90% 0;
+}
+/* Bangs Hair Group */
+#hair-bangs {
+  left: 65px;
+  top: 35px;
+  width: 120px;
+  height: 145px;
+  border-radius: 50% 50% 0 0;
+}
+
+#hair-bangs-bangs {
+  z-index: 4;
+  left: 13px;
+  top: 12px;
+  width: 94px;
+  height: 50px;
+  border-radius: 100px 100px 0 0;
+}
+
+#hair-bangs-sideburn-left {
+  z-index: 4;
+  left: 5px;
+  top: 60px;
+  width: 5px;
+  height: 25px;
+  border-radius: 0 0 0 90%;
+}
+
+#hair-bangs-sideburn-right {
+  z-index: 4;
+  left: 110px;
+  top: 60px;
+  width: 5px;
+  height: 25px;
+  border-radius: 0 0 90% 0;
+}
+/* Hair Bun Group */
+#hair-bun {
+  left: 70px;
+  top: 35px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50% 50% 20% 20%;
+}
+
+#hair-bun-bun {
+  left: 30px;
+  top: -20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#hair-bun-bangs-one {
+  z-index: 4;
+  top: 15px;
+  width: 70px;
+  height: 30px;
+  border-radius: 50%;
+  transform: rotate(-40deg);
+} 
+
+#hair-bun-bangs-two {
+  z-index: 4;
+  left: 25px;
+  top: 15px;
+  width: 70px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+#hair-bun-sideburn-left {
+  z-index: 4;
+  top: 65px;
+  width: 5px;
+  height: 20px;
+  border-radius: 0 0 90% 0;
+}
+
+#hair-bun-sideburn-right {
+  z-index: 4;
+  left: 105px;
+  top: 65px;
+  width: 5px;
+  height: 45px;
+  border-radius: 0 0 0 90%;
+}
+ 
+/* ------------------------- HAIR OPTIONS END */
+
+/* ------------------------- FACE OPTIONS BEGIN */
+
+.face-1,
+.face-2,
+.face-3,
+.face-4,
+.face-5,
+.face-6,
+.face-7,
+.face-features {
+  display: none;
+  z-index: 3;
+}
+
+.face-1 {
+  display: block;
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 120px;
+  background: #FFCCBC;
+  border-radius: 45%;
+}
+
+.face-2 {
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 120px;
+  border-radius: 70% 70% 50% 50%;
+}
+
+.face-3 {
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.face-4 {
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 113px;
+  border-radius: 50%;
+}
+
+.face-5 {
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 115px;
+  border-radius: 70% 70% 50% 50%;
+}
+
+.face-6 {
+  left: 70px;
+  top: 54px;
+  width: 110px;
+  height: 110px;
+  border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%; 
+  transform: rotate(135deg);
+}
+
+.face-7 {
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.face-features {
+  display: block;
+  left: 75px;
+  top: 50px;
+  width: 100px;
+  height: 120px;
+}
+
+/* ------------------------- FACE OPTIONS END */
+
+/* ------------------------- GLASSES OPTIONS BEGIN */
+
+.glasses-1,
+.glasses-2,
+.glasses-3,
+.glasses-4,
+.glasses-5,
+.glasses-6,
+.glasses-7 {
+  display: none;
+  z-index: 5;
+}
+/* Square Glasses Group */
+#glasses-square-left {
+  left: 5px;
+  top: 46px;
+  width: 28px;
+  height: 16px;
+  border: 5px solid #263238;
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(
+    45deg, 
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+    );
+}
+
+#glasses-square-right {
+  left: 59px;
+  top: 46px;
+  width: 28px;
+  height: 16px;
+  border: 5px solid #263238;
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(
+    45deg,
+   rgba(255, 255, 255, 0.9), 
+   rgba(255, 255, 255, 0)
+   );
+}
+
+#glasses-square-bridge {
+  left: 41px;
+  top: 52px;
+  width: 20px;
+  height: 5px;
+  background: #263238;
+  border-radius: 50% 50% 0 0;
+}
+/* Round Glasses Group */
+#glasses-round-left {
+  left: 6px;
+  top: 44px;
+  width: 25px;
+  height: 25px;
+  border: 5px solid red;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg, 
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+    );
+}
+
+#glasses-round-right {
+  left: 60px;
+  top: 44px;
+  width: 25px;
+  height: 25px;
+  border: 5px solid red;
+  border-radius: 50%;
+  background: linear-gradient(
+    45deg,
+   rgba(255, 255, 255, 0.9), 
+   rgba(255, 255, 255, 0)
+   );
+}
+
+#glasses-round-bridge {
+  left: 38px;
+  top: 55px;
+  width: 25px;
+  height: 5px;
+  background: red;
+  border-radius: 50% 50% 0 0;
+}
+/* Cateye Glasses Group */
+#glasses-cateye-left {
+  left: 6px;
+  top: 45px;
+  width: 25px;
+  height: 20px;
+  border: 5px solid blueviolet;
+  border-radius: 0 70% 50% 70%;
+  transform: rotate(-10deg);
+  background: linear-gradient(
+    45deg, 
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+    );
+}
+
+#glasses-cateye-right {
+  left: 60px;
+  top: 45px;
+  width: 25px;
+  height: 20px;
+  border: 5px solid blueviolet;
+  border-radius: 70% 0 70% 50%;
+  transform: rotate(10deg);
+  background: linear-gradient(
+    45deg,
+   rgba(255, 255, 255, 0.9), 
+   rgba(255, 255, 255, 0)
+   );
+}
+
+#glasses-cateye-bridge {
+  left: 38px;
+  top: 55px;
+  width: 25px;
+  height: 5px;
+  background: blueviolet;
+  border-radius: 50% 50% 0 0;
+}
+/* Reader Glasses Group */
+#glasses-readers-left {
+  left: 5px;
+  top: 52px;
+  width: 28px;
+  height: 8px;
+  border: 5px solid #263238;
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(
+    45deg, 
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0)
+    );
+}
+
+#glasses-readers-right {
+  left: 59px;
+  top: 52px;
+  width: 28px;
+  height: 8px;
+  border: 5px solid #263238;
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(
+    45deg,
+   rgba(255, 255, 255, 0.9), 
+   rgba(255, 255, 255, 0)
+   );
+}
+
+#glasses-readers-bridge {
+  left: 41px;
+  top: 55px;
+  width: 20px;
+  height: 5px;
+  background: #263238;
+  border-radius: 50% 50% 0 0;
+}
+/* Square Sunglasses Group */
+#sunglasses-square-left {
+  left: 5px;
+  top: 46px;
+  width: 28px;
+  height: 16px;
+  border: 5px solid #263238;
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(
+    -25deg, 
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5)
+    );
+}
+
+#sunglasses-square-right {
+  left: 59px;
+  top: 46px;
+  width: 28px;
+  height: 16px;
+  border: 5px solid #263238;
+  border-radius: 5px 5px 10px 10px;
+  background: linear-gradient(
+    -25deg,
+   rgba(0, 0, 0, 1), 
+   rgba(0, 0, 0, 0.5)
+   );
+}
+
+#sunglasses-square-bridge {
+  left: 41px;
+  top: 52px;
+  width: 20px;
+  height: 5px;
+  background: #263238;
+  border-radius: 50% 50% 0 0;
+}
+/* Round Sunglasses Group */
+#sunglasses-round-left {
+  left: 6px;
+  top: 44px;
+  width: 25px;
+  height: 25px;
+  border: 5px solid red;
+  border-radius: 50%;
+  background: linear-gradient(
+    -25deg, 
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5)
+    );
+}
+
+#sunglasses-round-right {
+  left: 60px;
+  top: 44px;
+  width: 25px;
+  height: 25px;
+  border: 5px solid red;
+  border-radius: 50%;
+  background: linear-gradient(
+    -25deg,
+   rgba(0, 0, 0, 1), 
+   rgba(0, 0, 0, 0.5)
+   );
+}
+
+#sunglasses-round-bridge {
+  left: 38px;
+  top: 55px;
+  width: 25px;
+  height: 5px;
+  background: red;
+  border-radius: 50% 50% 0 0;
+}
+/* Cateye Sunglasses Group */
+#sunglasses-cateye-left {
+  left: 6px;
+  top: 45px;
+  width: 25px;
+  height: 20px;
+  border: 5px solid blueviolet;
+  border-radius: 0 70% 50% 70%;
+  transform: rotate(-10deg);
+  background: linear-gradient(
+    -25deg, 
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5)
+    );
+}
+
+#sunglasses-cateye-right {
+  left: 60px;
+  top: 45px;
+  width: 25px;
+  height: 20px;
+  border: 5px solid blueviolet;
+  border-radius: 70% 0 70% 50%;
+  transform: rotate(10deg);
+  background: linear-gradient(
+    -25deg,
+   rgba(0, 0, 0, 1), 
+   rgba(0, 0, 0, 0.5)
+   );
+}
+
+/* Seventh option is no glasses */
+
+/* ------------------------- GLASSES OPTIONS END */
+
+/* ------------------------- EYEBROW OPTIONS BEGIN */
+
+.eyebrows-1,
+.eyebrows-2,
+.eyebrows-3,
+.eyebrows-4,
+.eyebrows-5,
+.eyebrows-6,
+.eyebrows-7 {
+  display: none;
+  z-index: 3;
+  background: #546E7A;
+}
+/* Eyebrows First Pair */
+#eyebrows-one-left {
+  left: 17px;
+  top: 43px;
+  width: 15px;
+  height: 3px;
+  border-radius: 50% 0 0 0;
+}
+
+#eyebrows-one-right {
+  left: 68px;
+  top: 43px;
+  width: 15px;
+  height: 3px;
+  border-radius: 0 50% 0 0;
+}
+/* Eyebrows Second Pair */
+#eyebrows-two-left {
+  left: 15px;
+  top: 40px;
+  width: 19px;
+  height: 6px;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-6deg);
+}
+
+#eyebrows-two-right {
+  left: 67px;
+  top: 40px;
+  width: 19px;
+  height: 6px;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(6deg);
+}
+/* Eyebrows Third Pair */
+#eyebrows-three-left {
+  display: block;
+  left: 11px;
+  top: 40px;
+  width: 25px;
+  height: 8px;
+  border-radius: 50% 0 70% 0;
+  transform: rotate(-4deg);
+}
+
+#eyebrows-three-right {
+  display: block;
+  left: 65px;
+  top: 40px;
+  width: 25px;
+  height: 8px;
+  background: #546E7A;
+  border-radius: 0 50% 0 70%;
+  transform: rotate(-4deg);
+}
+/* Eyebrows Fourth Pair */
+#eyebrows-four-left {
+  left: 10px;
+  top: 44px;
+  width: 35px;
+  height: 5px;
+  background: #546E7A;
+  border-radius: 0 0 50% 50%;
+}
+
+#eyebrows-four-right {
+  left: 56px;
+  top: 44px;
+  width: 35px;
+  height: 5px;
+  background: #546E7A;
+  border-radius: 0 0 50% 50%;
+}
+/* Eyebrows Fifth Pair */
+#eyebrows-five-left {
+  left: 17px;
+  top: 43px;
+  width: 15px;
+  height: 5px;
+  background: #546E7A;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(7deg);
+}
+
+#eyebrows-five-right {
+  left: 69px;
+  top: 40px;
+  width: 15px;
+  height: 5px;
+  background: #546E7A;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-7deg);
+}
+/* Eyebrows Sixth Pair */
+#eyebrows-six-left {
+  left: 10px;
+  top: 43px;
+  width: 30px;
+  height: 4px;
+  background: #546E7A;
+  border-radius: 90% 30% 0 0;
+  transform: rotate(-4deg);
+}
+
+#eyebrows-six-right {
+  left: 61px;
+  top: 43px;
+  width: 30px;
+  height: 4px;
+  background: #546E7A;
+  border-radius: 30% 90% 0 0;
+  transform: rotate(4deg);
+}
+/* Eyebrows Seventh Pair */
+#eyebrows-seven-left {
+  left: 10px;
+  top: 43px;
+  width: 20px;
+  height: 4px;
+  background: #546E7A;
+  border-radius: 100% 0 0 0;
+  transform: rotate(-9deg);
+}
+
+#eyebrows-seven-left-point {
+  left: 21px;
+  top: 0;
+  width: 10px;
+  height: 4px;
+  background: #546E7A;
+  border-radius: 0 100% 0 0;
+}
+
+#eyebrows-seven-right {
+  left: 72px;
+  top: 43px;
+  width: 20px;
+  height: 4px;
+  background: #546E7A;
+  border-radius: 0 100% 0 0;
+  transform: rotate(9deg);
+}
+
+#eyebrows-seven-right-point {
+  left: -11px;
+  top: 2px;
+  width: 10px;
+  height: 4px;
+  background: #546E7A;
+  border-radius: 100% 0 0 0;
+  transform: rotate(-18deg);
+}
+
+/* ------------------------- EYEBROW OPTIONS END */
+
+/* ------------------------- EYES OPTIONS BEGIN */
+
+.eyes {
+  display: block;
+  z-index: 3;
+  border-radius: 50%;
+}
+.eyes-1,
+.eyes-2,
+.eyes-3,
+.eyes-4,
+.eyes-5,
+.eyes-6,
+.eyes-7 {
+  display: none;
+  z-index: 3;
+  border-radius: 50%;
+  animation-name: pulse;
+  animation-duration: 1000ms;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); } 
+} 
+
+/* Eyes First Pair */
+#eyes-one-left {
+  display: block;
+  left: 20px;
+  top: 53px;
+  width: 10px;
+  height: 10px;
+  background: #546E7A;
+}
+
+#eyes-one-right {
+  display: block;
+  left: 70px;
+  top: 53px;
+  width: 10px;
+  height: 10px;
+  background: #546E7A;
+}
+/* Eyes Second Pair */
+#eyes-two-left {
+  left: 17px;
+  top: 50px;
+  width: 15px;
+  height: 15px;
+  background: #FFF;
+}
+
+#eyes-two-right {
+  left: 69px;
+  top: 50px;
+  width: 15px;
+  height: 15px;
+  background: #FFF;
+}
+
+#eyes-two-left-pupil {
+  left: 3px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+  background: #000;
+}
+
+#eyes-two-right-pupil {
+  left: 3px;
+  top: 3px;
+  width: 9px;
+  height: 9px;
+  background: #000;
+}
+/* Eyes Third Pair */
+#eyes-three-left {
+  left: 17px;
+  top: 53px;
+  width: 13px;
+  height: 13px;
+  background: #26C6DA;
+}
+
+#eyes-three-left-eyelash {
+  left: -2px;
+  top: -0.5px;
+  width: 10px;
+  height: 5px;
+  background: #26C6DA;
+  border-radius: 0 20% 0 90%;
+  transform: rotate(5deg);
+}
+
+#eyes-three-left-pupil {
+  left: 4px;
+  top: 4px;
+  width: 5px;
+  height: 5px;
+  background: #FFF;
+}
+
+#eyes-three-right {
+  left: 71px;
+  top: 53px;
+  width: 13px;
+  height: 13px;
+  background: #26C6DA;
+}
+
+#eyes-three-right-eyelash {
+  left: 5px;
+  top: -0.5px;
+  width: 10px;
+  height: 5px;
+  background: #26C6DA;
+  border-radius: 20% 0 90% 0;
+  transform: rotate(-5deg);
+}
+
+#eyes-three-right-pupil {
+  left: 4px;
+  top: 4px;
+  width: 5px;
+  height: 5px;
+  background: #FFF;
+}
+/* Eyes Fourth Pair */
+#eyes-four-left {
+  left: 17px;
+  top: 55px;
+  width: 15px;
+  height: 7px;
+  background: #FFF;
+  border-radius: 0 0 100px 100px;
+}
+
+#eyes-four-right {
+  left: 69px;
+  top: 55px;
+  width: 15px;
+  height: 7px;
+  background: #FFF;
+  border-radius: 0 0 100px 100px;
+}
+
+#eyes-four-left-pupil {
+  left: 3px;
+  width: 9px;
+  height: 5px;
+  background: #000;
+  border-radius: 0 0 100px 100px;
+}
+
+#eyes-four-right-pupil {
+  left: 3px;
+  width: 9px;
+  height: 5px;
+  background: #000;
+  border-radius: 0 0 100px 100px;
+}
+/* Eyes Fifth Pair */
+#eyes-five-left {
+  left: 17px;
+  top: 55px;
+  width: 15px;
+  height: 7px;
+  background: #FFF;
+  border-radius: 100px 100px 0 0;
+}
+
+#eyes-five-right {
+  left: 69px;
+  top: 55px;
+  width: 15px;
+  height: 7px;
+  background: #FFF;
+  border-radius: 100px 100px 0 0;
+}
+
+#eyes-five-left-pupil {
+  left: 3px;
+  top: 2px;
+  width: 9px;
+  height: 5px;
+  background: #000;
+  border-radius: 100px 100px 0 0;
+}
+
+#eyes-five-right-pupil {
+  left: 3px;
+  top: 2px;
+  width: 9px;
+  height: 5px;
+  background: #000;
+  border-radius: 100px 100px 0 0;
+}
+/* Eyes Sixth Pair */
+#eyes-six-left {
+  left: 20px;
+  top: 53px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+}
+
+#eyes-six-right {
+  left: 71px;
+  top: 53px;
+  width: 10px;
+  height: 10px;
+  background: #000;
+}
+
+#eyes-six-left-pupil {
+  left: 3px;
+  width: 5px;
+  height: 5px;
+  background: #FFF;
+}
+
+#eyes-six-right-pupil {
+  left: 3px;
+  width: 5px;
+  height: 5px;
+  background: #FFF;
+}
+/* Eyes Seventh Pair */
+#eyes-seven-left {
+  left: 23px;
+  top: 53px;
+  width: 8px;
+  height: 8px;
+  background: #000;
+}
+
+#eyes-seven-right {
+  left: 70px;
+  top: 53px;
+  width: 8px;
+  height: 8px;
+  background: #000;
+}
+
+#eyes-seven-left-eyelash-one {
+  left: -7px;
+  top: 2px;
+  width: 10px;
+  height: 2px;
+  background: #000;
+}
+
+#eyes-seven-left-eyelash-two {
+  left: -5px;
+  width: 10px;
+  height: 2px;
+  background: #000;
+  transform: rotate(9deg);
+}
+
+#eyes-seven-right-eyelash-one {
+  left: 5px;
+  top: 2px;
+  width: 10px;
+  height: 2px;
+  background: #000;
+}
+
+#eyes-seven-right-eyelash-two {
+  left: 4px;
+  width: 10px;
+  height: 2px;
+  background: #000;
+  transform: rotate(-9deg);
+}
+
+#eyes-seven-left-pupil{
+  left: 3px;
+  top: 2px;
+  width: 2px;
+  height: 4px;
+  background: #FFF;
+  border-radius: 0;
+}
+
+#eyes-seven-right-pupil{
+  left: 3px;
+  top: 2px;
+  width: 2px;
+  height: 4px;
+  background: #FFF;
+  border-radius: 0;
+}
+
+/* ------------------------- EYES OPTIONS END */
+
+/* ------------------------- EARS OPTIONS BEGIN */
+
+.ears-1,
+.ears-2,
+.ears-3,
+.ears-4,
+.ears-5,
+.ears-6,
+.ears-7 {
+  display: none;
+}
+/* Ears First Pair */
+#ears-one-left {
+  left: -15px;
+  top: 55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 0 0 50%;
+  background: #FFCCBC;
+}
+
+#ears-one-right {
+  left: 95px;
+  top: 55px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0 50% 50% 0;
+  background: #FFCCBC;
+}
+/* Ears Second Pair */
+#ears-two-left {
+  left: -13px;
+  top: 55px;
+  width: 20px;
+  height: 35px;
+  border-radius: 50%;
+  transform: rotate(-17deg);
+  background: #FFCCBC;
+}
+
+#ears-two-right {
+  left: 93px;
+  top: 55px;
+  width: 20px;
+  height: 35px;
+  border-radius: 50%;
+  transform: rotate(17deg);
+  background: #FFCCBC;
+}
+/* Ears Third Pair */
+#ears-three-left {
+  display: block;
+  left: -20px;
+  top: 55px;
+  width: 35px;
+  height: 25px;
+  border-radius: 50%;
+  transform: rotate(18deg);
+  background: #FFCCBC;
+}
+
+#ears-three-right {
+  display: block;
+  left: 85px;
+  top: 55px;
+  width: 35px;
+  height: 25px;
+  border-radius: 50%;
+  transform: rotate(-18deg);
+  background: #FFCCBC;
+}
+/* Ears Fourth Pair */
+#ears-four-left {
+  left: -25px;
+  top: 55px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10% 0 20% 100%;
+  transform: rotate(13deg);
+  background: #FFCCBC;
+}
+
+#ears-four-right {
+  left: 95px;
+  top: 55px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 10% 100% 20%;
+  transform: rotate(-13deg);
+  background: #FFCCBC;
+}
+/* Ears Fifth Pair */
+#ears-five-left {
+  left: -18px;
+  top: 50px;
+  width: 30px;
+  height: 35px;
+  border-radius: 35% 50% 0 65%;
+  transform: rotate(-10deg);
+  background: #FFCCBC;
+}
+
+#ears-five-right {
+  left: 88px;
+  top: 50px;
+  width: 30px;
+  height: 35px;
+  border-radius: 50% 35% 65% 0;
+  transform: rotate(10deg);
+  background: #FFCCBC;
+}
+/* Ears Sixth Pair */
+#ears-six-left {
+  left: -15px;
+  top: 55px;
+  width: 25px;
+  height: 25px;
+  border-radius: 40% 0 0 80%;
+  background: #FFCCBC;
+}
+
+#ears-six-right {
+  left: 90px;
+  top: 55px;
+  width: 25px;
+  height: 25px;
+  border-radius: 0 40% 80% 0;
+  background: #FFCCBC;
+}
+/* Ears Seventh Pair */
+#ears-seven-left {
+  left: -14px;
+  top: 55px;
+  width: 20px;
+  height: 30px;
+  border-radius: 25% 50% 50% 65%;
+  background: #FFCCBC;
+}
+
+#ears-seven-right {
+  left: 94px;
+  top: 55px;
+  width: 20px;
+  height: 30px;
+  border-radius: 50% 25% 65% 50%;
+  background: #FFCCBC;
+}
+
+/* ------------------------- EARS OPTIONS END */
+
+/* ------------------------- EARRINGS OPTIONS BEGIN */
+
+.earrings-1,
+.earrings-2,
+.earrings-3,
+.earrings-4,
+.earrings-5,
+.earrings-6,
+.earrings-7 {
+  display: none;
+  z-index: 5;
+}
+
+/* Earrings First Pair is no earrings */
+
+/* Earrings Second Pair */
+#earrings-two-left {
+  left: -7px;
+  top: 72px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-two-right {
+  left: 102px;
+  top: 72px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #000;
+}
+/* Earrings Third Pair */
+#earrings-three-left {
+  left: -7px;
+  top: 75px;
+  width: 3px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-three-right {
+  left: 102px;
+  top: 75px;
+  width: 3px;
+  height: 10px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-four-left {
+  left: -4px;
+  top: 75px;
+  width: 2px;
+  height: 10px;
+  border-radius: 50% 50% 0 0;
+  background: #000;
+}
+
+#earrings-four-left-pearl-one {
+  left: -2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-four-left-pearl-two {
+  left: -1px;
+  top: 14px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-four-right {
+  left: 102px;
+  top: 75px;
+  width: 2px;
+  height: 10px;
+  border-radius: 50% 50% 0 0;
+  background: #000;
+}
+
+#earrings-four-right-pearl-one {
+  left: -2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-four-right-pearl-two {
+  left: -1px;
+  top: 14px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-five-left {
+  left: -7px;
+  top: 72px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 0 0 2px #000 inset;
+}
+
+#earrings-five-right {
+  left: 99px;
+  top: 72px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 0 0 2px #000 inset;
+}
+
+#earrings-five-left-helix {
+  left: -10px;
+  top: -15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 -2px #000;
+}
+
+#earrings-five-right-helix {
+  left: 13px;
+  top: -15px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 0 -2px #000;
+}
+
+#earrings-six-left {
+  left: -5px;
+  top: 75px;
+  width: 2px;
+  height: 10px;
+  background: #000;
+  border-radius: 50% 50% 0 0;
+}
+
+#earrings-six-right {
+  left: 103px;
+  top: 75px;
+  width: 2px;
+  height: 10px;
+  background: #000;
+  border-radius: 50% 50% 0 0;
+}
+
+#earrings-six-left-diamond {
+  left: -2px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  transform: rotate(45deg);
+}
+
+#earrings-six-right-diamond {
+  left: -2px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: #000;
+  transform: rotate(45deg);
+}
+
+#earrings-seven-left {
+  left: -5px;
+  top: 75px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-seven-right {
+  left: 102px;
+  top: 75px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #000;
+}
+
+#earrings-seven-left-contour {
+  left: -10px;
+  top: -3px;
+  width: 8px;
+  height: 2px;
+  border-radius: 0 0 50% 50%;
+  background: #000;
+  transform: rotate(35deg);
+}
+
+#earrings-seven-right-contour {
+  left: 5px;
+  top: -3px;
+  width: 8px;
+  height: 2px;
+  border-radius: 0 0 50% 50%;
+  background: #000;
+  transform: rotate(-35deg);
+}
+
+/* ------------------------- EARRINGS OPTIONS END */
+
+/* ------------------------- NOSE OPTIONS BEGIN */
+
+.nose-1,
+.nose-2,
+.nose-3,
+.nose-4,
+.nose-5,
+.nose-6,
+.nose-7 {
+  display: none;
+  z-index: 3;
+}
+/* Nose First Option */
+#nose-one {
+  display: block;
+  left: 45px;
+  top: 60px;
+  width: 10px;
+  height: 16px;
+  background: #EF9A9A;
+  border-radius: 40%;
+}
+/* Nose Second Option */
+#nose-two {
+  left: 45px;
+  top: 63px;
+  width: 10px;
+  height: 10px;
+  background: #EF9A9A;
+  border-radius: 20% 90% 0 0;
+}
+/* Nose Third Option */
+#nose-three {
+  left: 40px;
+  top: 65px;
+  width: 20px; 
+  height: 10px;
+  background: #EF9A9A;
+  border-radius: 100px 100px 0 0;
+}
+/* Nose Fourth Option */
+#nose-four {
+  left: 44px;
+  top: 50px;
+  width: 13px;
+  height: 25px;
+  border-radius: 85% 85% 50% 50%;
+  background: #EF9A9A;
+}
+
+#nose-four-bulb {
+  left: -4px;
+  top: 17px;
+  width: 21px;
+  height: 13px;
+  border-radius: 50%;
+  background: #EF9A9A;
+}
+/* Nose Fifth Option */
+#nose-five {
+  left: 43px;
+  top: 63px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50% 50% 50% 90%;
+  transform: rotate(-13deg);
+  background: #EF9A9A;
+}
+/* Nose Sixth Option */
+#nose-six {
+  left: 43px;
+  top: 53px;
+  width: 15px;
+  height: 25px;
+  border-radius: 50% 50% 0 0;
+  background: #EF9A9A;
+}
+/* Nose Seventh Option */
+#nose-seven {
+  left: 43px;
+  top: 62px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #EF9A9A;
+}
+
+#nose-seven-left-nostril {
+  left: -4px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #EF9A9A;
+}
+
+#nose-seven-right-nostril {
+  left: 11px;
+  top: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #EF9A9A;
+}
+
+/* ------------------------- NOSE OPTIONS END */
+
+/* ------------------------- MOUTH OPTIONS BEGIN */
+
+.mouth,
+.mouth-1,
+.mouth-2,
+.mouth-3,
+.mouth-4,
+.mouth-5,
+.mouth-6,
+.mouth-7 {
+  display: none;
+  z-index: 5;
+}
+/* Mouth First Option */
+#mouth-one {
+  display: block;
+  left: 35px;
+  top: 95px;
+  width: 30px;
+  height: 3px;
+  background: #EF9A9A;
+  border-radius: 0 0 50% 50%;
+  transform: rotate(2deg);
+}
+/* Mouth Second Option */
+#mouth-two {
+  left: 30px;
+  top: 92px;
+  width: 40px;
+  height: 20px;
+  background: #263238;
+  border-radius: 0 0 100px 100px;
+  overflow: hidden;
+}
+
+#mouth-two-tongue {
+  left: 5px;
+  top: 5px;
+  width: 40px;
+  height: 25px;
+  background: #F48FB1;
+  border-radius: 100px 100px 0 0;
+}
+/* Mouth Third Option */
+#mouth-three {
+  left: 40px;
+  top: 97px;
+  width: 20px;
+  height: 10px;
+  background: #EF9A9A;
+  border-radius: 0 0 100px 100px;
+}
+
+#mouth-three-lip-one {
+  left: 0px;
+  top: -3px;
+  width: 10px;
+  height: 6px;
+  border-radius: 90% 25% 0 0;
+  transform: rotate(-30deg);
+}
+
+#mouth-three-lip-two {
+  left: 10px;
+  top: -3px;
+  width: 10px;
+  height: 6px;
+  border-radius: 25% 90% 0 0;
+  transform: rotate(30deg);
+}
+/* Mouth Fourth Option */
+#mouth-four {
+  left: 35px;
+  top: 94px;
+  width: 30px;
+  height: 15px;
+  background: #000;
+  border-radius: 0 0 100px 100px;
+}
+
+#mouth-four-teeth {
+  left: 2px;
+  width: 26px;
+  height: 4px;
+  border-radius: 0 0 60% 60%;
+}
+/* Mouth Fifth Option */
+#mouth-five {
+  left: 33px;
+  top: 94px;
+  width: 34px;
+  height: 4px;
+  border-radius: 0 0 50% 50%;
+}
+
+#mouth-five-left-tooth {
+  left: 3px;
+  width: 4px;
+  height: 7px;
+  border-radius: 0 0 0 100%;
+}
+
+#mouth-five-right-tooth {
+  left: 27px;
+  width: 4px;
+  height: 7px;
+  border-radius: 0 0 100% 0;
+}
+/* Mouth Sixth Option */
+#mouth-six {
+  left: 33px;
+  top: 94px;
+  width: 34px;
+  height: 10px;
+  border-radius: 0 0 100px 100px;
+}
+
+#mouth-six-tongue {
+  left: 7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 0 0 50% 50%;
+}
+
+#mouth-six-teeth {
+  width: 34px;
+  height: 4px;
+  border-radius: 0 0 50% 50%;
+}
+/* Mouth Seventh Option */
+#mouth-seven {
+  left: 33px;
+  top: 94px;
+  width: 34px;
+  height: 3px;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-2deg);
+}
+
+/* ------------------------- MOUTH OPTIONS END */
+
+/* ------------------------- BLUSH OPTIONS BEGIN */
+
+.blush-1,
+.blush-2,
+.blush-3,
+.blush-4,
+.blush-5,
+.blush-6,
+.blush-7 {
+  display: none;
+  z-index: 3;
+}
+/* Blush First Pair */
+#blush-one-left {
+  display: block;
+  left: 10px;
+  top: 70px;
+  width: 20px;
+  height: 10px;
+  background: #F8BBD0;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+#blush-one-right {
+  display: block;
+  left: 70px;
+  top: 70px;
+  width: 20px;
+  height: 10px;
+  background: #F8BBD0;
+  border-radius: 50%;
+  opacity: 50%;
+}
+/* Blush Second Pair */
+#blush-two-left {
+  left: 5px;
+  top: 70px;
+  width: 30px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+#blush-two-right {
+  left: 65px;
+  top: 70px;
+  width: 30px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 50%;
+}
+/* Blush Third Pair */
+#blush-three-left {
+  left: 10px;
+  top: 70px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 50%;
+}
+
+#blush-three-right {
+  left: 70px;
+  top: 70px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 50%;
+}
+/* Blush Fourth Pair */
+#blush-four-left {
+  left: 10px;
+  top: 70px;
+  width: 20px;
+  height: 8px;
+  border-radius: 20%;
+  opacity: 50%;
+  transform: rotate(-8deg);
+}
+
+#blush-four-right {
+  left: 70px;
+  top: 70px;
+  width: 20px;
+  height: 8px;
+  border-radius: 20%;
+  opacity: 50%;
+  transform: rotate(8deg);
+}
+/* Blush Fifth Pair */
+#blush-five-left {
+  left: 10px;
+  top: 70px;
+  width: 25px;
+  height: 10px;
+  border-radius: 30%;
+  opacity: 50%;
+  transform: rotate(-8deg);
+}
+
+#blush-five-right {
+  left: 65px;
+  top: 70px;
+  width: 25px;
+  height: 10px;
+  border-radius: 30%;
+  opacity: 50%;
+  transform: rotate(8deg);
+}
+/* Blush Sixth Pair */
+#blush-six-left {
+  left: 10px;
+  top: 70px;
+  width: 10px;
+  height: 10px;
+  border-radius: 20%;
+  opacity: 50%;
+  transform: rotate(45deg);
+}
+
+#blush-six-right {
+  left: 80px;
+  top: 70px;
+  width: 10px;
+  height: 10px;
+  border-radius: 20%;
+  opacity: 50%;
+  transform: rotate(45deg);
+}
+
+/* Blush Seventh Pair is no blush */
+
+/* ------------------------- BLUSH OPTIONS END */
+
+/* ------------------------- FACIAL HAIR OPTIONS BEGIN */
+
+.facial-hair-1,
+.facial-hair-2,
+.facial-hair-3,
+.facial-hair-4,
+.facial-hair-5,
+.facial-hair-6,
+.facial-hair-7 {
+  display: none;
+  z-index: 4;
+}
+/* Mustache Group */
+#mustache-left {
+  display: block;
+  left: 20px;
+  top: 80px;
+  width: 30px;
+  height: 10px;
+  background: #546E7A;
+  border-radius: 100% 0 0 0;
+}
+
+#mustache-right {
+  display: block;
+  left: 50px;
+  top: 80px;
+  width: 30px;
+  height: 10px;
+  background: #546E7A;
+  border-radius: 0 100% 0 0;
+}
+/* Beard Group */
+#beard {
+  top: 81px;
+  width: 100px;
+  height: 70px;
+  background: #546E7A;
+  border-radius: 70% 70% 100px 100px;
+}
+
+#beard-sideburn-left {
+  top: -19px;
+  width: 10px;
+  height: 40px;
+  background: #546E7A;
+  border-radius: 0 100% 0 0;
+}
+
+#beard-sideburn-right {
+  left: 90px;
+  top: -19px;
+  width: 10px;
+  height: 40px;
+  background: #546E7A;
+  border-radius: 100% 0 0 0;
+}
+/* Goatee Group */
+#goatee {
+  left: 20px;
+  top: 100px;
+  width: 60px;
+  height: 30px;
+  background: #546E7A;
+  border-radius: 0 0 100px 100px;
+}
+
+#goatee-mustache {
+  top: -20px;
+  width: 60px;
+  height: 10px;
+  background: #546E7A;
+  border-radius: 100px 100px 0 0 ;
+}
+
+#goatee-left {
+  top: -12px;
+  width: 10px;
+  height: 20px;
+  background: #546E7A;
+  border-radius: 0 90% 0 30%;
+}
+
+#goatee-right {
+  left: 50px;
+  top: -12px;
+  width: 10px;
+  height: 20px;
+  background: #546E7A;
+  border-radius: 90% 0 30% 0;
+}
+/* Van Dyke Group */
+#van-dyke {
+  left: 40px;
+  top: 105px;
+  width: 20px;
+  height: 20px;
+  border-radius: 90% 0 0 0;
+  transform: rotate(45deg);
+}
+
+#van-dyke-left-mustache {
+  left: 28px;
+  top: 82px;
+  width: 20px;
+  height: 7px;
+  border-radius: 90% 0 0 0;
+}
+
+#van-dyke-right-mustache {
+  left: 52px;
+  top: 82px;
+  width: 20px;
+  height: 7px;
+  border-radius: 0 90% 0 0;
+}
+/* Lamb Chops Group */
+#lamb-chops-left {
+  left: -6px;
+  top: 56px;
+  width: 20px;
+  height: 42px;
+  border-radius: 0 100% 0 100%;
+  transform: rotate(12deg);
+}
+
+#lamb-chops-right {
+  left: 86px;
+  top: 56px;
+  width: 20px;
+  height: 42px;
+  border-radius: 100% 0 100% 0;
+  transform: rotate(-12deg);
+}
+
+#lamb-chops-left-mustache {
+  left: 8px;
+  top: 83px;
+  width: 43px;
+  height: 13px;
+  border-radius: 70% 0 100% 0;
+  transform: rotate(-10deg);
+}
+
+#lamb-chops-right-mustache {
+  left: 50px;
+  top: 83px;
+  width: 43px;
+  height: 13px;
+  border-radius: 0 70% 0 100%;
+  transform: rotate(10deg);
+}
+/* Cowboy Mustache Group */
+#cowboy-mustache-left {
+  left: 20px;
+  top: 80px;
+  width: 30px;
+  height: 10px;
+  border-radius: 100% 0 0 0;
+}
+
+#cowboy-mustache-left-handle {
+  top: 10px;
+  width: 10px;
+  height: 20px;
+  border-radius: 0 0 80% 0;
+}
+
+#cowboy-mustache-right {
+  left: 50px;
+  top: 80px;
+  width: 30px;
+  height: 10px;
+  border-radius: 0 100% 0 0;
+}
+
+#cowboy-mustache-right-handle {
+  left: 20px;
+  top: 10px;
+  width: 10px;
+  height: 20px;
+  border-radius: 0 0 0 80%;
+}
+
+/* Seventh option is no facial hair */
+
+/* ------------------------- FACIAL HAIR OPTIONS END */
+
+.neck {
+  z-index: 2;
+  left: 110px;
+  top: 155px;
+  width: 30px;
+  height: 30px;
+  background: #FFCCBC;
+  border-radius: 0 0 50% 50%;
+}
+
+/* ------------------------- NECKLACE OPTIONS START */
+
+.necklace-1,
+.necklace-2,
+.necklace-3,
+.necklace-4,
+.necklace-5,
+.necklace-6,
+.necklace-7 {
+  display: none;
+  z-index: 1;
+}
+
+/* First option is no necklace */
+
+#necklace-two-left {
+  left: 105px;
+  top: 169px;
+  width: 30px;
+  height: 55px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: -1px 0px gold;
+  transform: rotate(-15deg);
+}
+
+#necklace-two-right {
+  left: 114px;
+  top: 169px;
+  width: 30px;
+  height: 55px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 1px 0px gold;
+  transform: rotate(15deg);
+}
+
+#necklace-three {
+  left: 100px;
+  top: 123px;
+  width: 50px;
+  height: 100px;
+  border-radius: 0 0 50% 50%;
+  background: none;
+  box-shadow: 0 1px gold;
+}
+
+#necklace-three-inner {
+  left: 0px;
+  top: 12px;
+  width: 50px;
+  height: 80px;
+  border-radius: 0 0 50% 50%;
+  background: none;
+  box-shadow: 0 1px gold;
+}
+
+#necklace-four {
+  left: 96px;
+  top: 175px;
+  width: 58px;
+  height: 29px;
+  border-radius: 0 0 100px 100px;
+  background: none;
+  box-shadow: 0 1px gold;
+}
+
+#necklace-four-rectangle {
+  left: 28.5px;
+  top: 30px;
+  width: 1px;
+  height: 8px;
+  background: gold;
+}
+
+#necklace-four-circle {
+  left: 24px;
+  top: 35px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: gold;
+}
+
+#necklace-five-left {
+  left: 105px;
+  top: 169px;
+  width: 30px;
+  height: 55px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: -1px 0px gold;
+  transform: rotate(-15deg);
+}
+
+#necklace-five-right {
+  left: 114px;
+  top: 169px;
+  width: 30px;
+  height: 55px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 1px 0px gold;
+  transform: rotate(15deg);
+}
+
+#necklace-five-rectangle {
+  left: 124px;
+  top: 223.5px;
+  width: 1px;
+  height: 5px;
+  background: gold;
+}
+
+#necklace-five-diamond {
+  left: 120.5px;
+  top: 229px;
+  width: 8px;
+  height: 8px;
+  background: gold;
+  transform: rotate(45deg);
+}
+
+#necklace-six-left {
+  left: 105px;
+  top: 169px;
+  width: 30px;
+  height: 45px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: -1px 0px gold;
+  transform: rotate(-15deg);
+}
+
+#necklace-six-right {
+  left: 114px;
+  top: 169px;
+  width: 30px;
+  height: 45px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 1px 0px gold;
+  transform: rotate(15deg);
+}
+
+#necklace-six-rectangle {
+  left: 124px;
+  top: 214px;
+  width: 1px;
+  height: 5px;
+  background: gold;
+}
+
+#necklace-six-triangle-one {
+  left: 117.5px;
+  top: 217px;
+  width: 0; 
+  height: 0; 
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid gold;
+}
+
+#necklace-six-triangle-two {
+  left: 117.5px;
+  top: 224px;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid gold;
+}
+
+#necklace-seven-left {
+  left: 105px;
+  top: 169px;
+  width: 30px;
+  height: 55px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: -1px 0px gold;
+  transform: rotate(-15deg);
+}
+
+#necklace-seven-right {
+  left: 114px;
+  top: 169px;
+  width: 30px;
+  height: 55px;
+  border-radius: 50%;
+  background: none;
+  box-shadow: 1px 0px gold;
+  transform: rotate(15deg);
+}
+
+#necklace-seven-rectangle {
+  left: 124px;
+  top: 223.5px;
+  width: 1px;
+  height: 5px;
+  background: gold;
+}
+
+#necklace-seven-heart-left {
+  left: 120.75px;
+  top: 225px;
+  width: 5px;
+  height: 8px;
+  border-radius: 50% 50% 0 0;
+  background: gold;
+  transform: rotate(-45deg);
+}
+
+#necklace-seven-heart-right {
+  left: 123.25px;
+  top: 225px;
+  width: 5px;
+  height: 8px;
+  border-radius: 50% 50% 0 0;
+  background: gold;
+  transform: rotate(45deg);
+}
+
+/* ------------------------- NECKLACE OPTIONS END */
+
+/* ------------------------- CLOTHING OPTIONS START */
+
+.body-1,
+.body-2,
+.body-3,
+.body-4,
+.body-5,
+.body-6,
+.body-7 {
+  display: none;
+}
+
+/* Solid Shirt */
+#solid {
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  background: #1976D2;
+  border-radius: 50%;
+}
+/* Striped Shirt */
+#stripes {
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: repeating-linear-gradient(
+    90deg,
+    #000,
+    #000 10px,
+    #FFF 10px,
+    #FFF 20px
+  );
+}
+/* Gradient Shirt */
+#gradient {
+  display: block;
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(65deg, #8C366C, #6E64E7);
+  border-radius: 50%;
+}
+/* Jacket */
+#jacket-collar {
+  left: 108px;
+  top: 165px;
+  width: 34px;
+  height: 30px;
+}
+
+#jacket {
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+#jacket-left {
+  left: 1px;
+  top: -1px;
+  width: 53px;
+  height: 140px;
+  border-radius: 100px 0 0 100px;
+}
+
+#jacket-right {
+  left: 88px;
+  top: -1px;
+  width: 53px;
+  height: 140px;
+  border-radius: 0 100px 100px 0;
+}
+
+#jacket-left-pocket {
+  left: 24px;
+  top: 40px;
+  width: 20px;
+  height: 3px;
+  box-shadow: 0 0 0 1px #666 inset;
+}
+
+#jacket-right-pocket {
+  left: 98px;
+  top: 40px;
+  width: 20px;
+  height: 3px;
+  box-shadow: 0 0 0 1px #666 inset;
+}
+
+#jacket-left-top-lapel {
+  left: 35px;
+  top: -8px;
+  width: 20px;
+  height: 25px;
+  border-radius: 100% 0 0 0;
+  box-shadow: 0 0 0 1px #666 inset;
+  transform: rotate(5deg);
+}
+
+#jacket-right-top-lapel {
+  left: 87px;
+  top: -8px;
+  width: 20px;
+  height: 25px;
+  border-radius: 0 100% 0 0;
+  box-shadow: 0 0 0 1px #666 inset;
+  transform: rotate(-5deg);
+}
+
+#jacket-left-bottom-lapel {
+  left: 40px;
+  top: 18px;
+  width: 20px;
+  height: 75px;
+  border-radius: 0 0 0 100%;
+  box-shadow: 0 0 0 1px #666 inset;
+  transform: rotate(-9deg);
+}
+
+#jacket-right-bottom-lapel {
+  left: 82px;
+  top: 18px;
+  width: 20px;
+  height: 75px;
+  border-radius: 0 0 100% 0;
+  box-shadow: 0 0 0 1px #666 inset;
+  transform: rotate(9deg);
+}
+
+#jacket-left-shoulder-loop {
+  left: 12px;
+  top: 5px;
+  width: 30px;
+  height: 8px;
+  border-radius: 50% 50% 30% 30%;
+  box-shadow: 0 0 0 1px #666 inset;
+  transform: rotate(-30deg);
+}
+
+#jacket-right-shoulder-loop {
+  left: 100px;
+  top: 5px;
+  width: 30px;
+  height: 8px;
+  border-radius: 50% 50% 30% 30%;
+  box-shadow: 0 0 0 1px #666 inset;
+  transform: rotate(30deg);
+}
+
+#small-boobs {
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+#small-boobs-left {
+  left: 27px;
+  top: 43px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 25%;
+  box-shadow: -2px 3px #000000;
+  animation-name: pulse; /* keyframe defined under eyes */
+  animation-duration: 1000ms;
+}
+
+#small-boobs-right {
+  left: 84px;
+  top: 43px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  opacity: 25%;
+  box-shadow: 2px 3px #000000;
+  animation-name: pulse; /* keyframe defined under eyes */
+  animation-duration: 1000ms;
+}
+
+#big-boobs {
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+#big-boobs-left {
+  left: 25px;
+  top: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  opacity: 25%;
+  box-shadow: -2px 3px #000000;
+  animation-name: pulse; /* keyframe defined under eyes */
+  animation-duration: 1000ms;
+}
+
+#big-boobs-right {
+  left: 71px;
+  top: 30px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  opacity: 25%;
+  box-shadow: 2px 3px #000000;
+  animation-name: pulse; /* keyframe defined under eyes */
+  animation-duration: 1000ms;
+}
+
+#cape {
+  left: 54px;
+  top: 170px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+#cape-left {
+  left: -8px;
+  top: -5px;
+  width: 70px;
+  height: 140px;
+  border-radius: 100px 0 0 100px;
+  transform: rotate(10deg);
+}
+
+#cape-right {
+  left: 80px;
+  top: -5px;
+  width: 70px;
+  height: 140px;
+  border-radius: 0 100px 100px 0;
+  transform: rotate(-10deg);
+}
+
+#cape-left-collar {
+  z-index: 2;
+  left: 39px;
+  top: -7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 100% 0 0;
+  transform: rotate(-10deg);
+}
+
+#cape-right-collar {
+  z-index: 2;
+  left: 73px;
+  top: -7px;
+  width: 30px;
+  height: 30px;
+  border-radius: 100% 0 0 0;
+  transform: rotate(10deg);
+}
+
+#cape-button {
+  z-index: 2;
+  left: 67px;
+  top: 13px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 2px #FFFFFF inset;
+}
+
+/* ------------------------- CLOTHING OPTIONS END */
+

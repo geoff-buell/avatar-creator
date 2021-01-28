@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+  <title>Avatar Creator</title>
+</head>
+<body>  
+  <p id="title">Avatar Creator</p>
+  <form>
+    <!-- <label for="features"><strong>Select a Feature:</strong></label> -->
+    <select name="features" id="features">
+      <option value="" disabled selected>Select a feature</option>
+      <option value="hair">Hair</option>
+      <option value="face">Face</option>
+      <option value="glasses">Glasses</option>
+      <option value="eyebrows">Eyebrows</option>
+      <option value="eyes">Eyes</option>
+      <option value="ears">Ears</option>
+      <option value="nose">Nose</option>
+      <option value="mouth">Mouth</option>
+      <option value="blush">Blush</option>
+      <option value="facial-hair">Facial Hair</option>
+      <option value="earrings">Earrings</option>
+      <option value="necklace">Necklace</option>
+      <option value="body">Body</option>
+    </select>
+    <button class="select" id="select-btn">Select</button>
+  </form>
+  <p class="output">No feature selected.</p>
+    <div id="instructions-one">
+      <div class="arrow" id="up-arrow"><p>&#8593;</p></div>
+    </div>
+    <div id="instructions-two">
+      <div class="arrow" id="left-arrow"><p>&#8592;</p></div>
+      <div class="arrow" id="down-arrow"><p>&#8595;</p></div>
+      <div class="arrow" id="right-arrow"><p>&#8594;</p></div>
+    </div>
+
+  <div class="circle" id="circle">
+    
+    <div class="head" id="head">
+
+      <div class="hair-1" id="hair-bald"></div>
+
+      <div class="hair-2" id="hair-balding">
+        <div class="hair-2" id="hair-balding-receed"></div>
+      </div>
+
+      <div class="hair-3" id="hair-short">
+        <div class="hair-3" id="hair-short-bangs-one"></div>
+        <div class="hair-3" id="hair-short-bangs-two"></div>
+      </div>
+
+      <div class="hair-4" id="hair-shaggy">
+        <div class="hair-4" id="hair-shaggy-bangs-one"></div>
+        <div class="hair-4" id="hair-shaggy-bangs-two"></div>
+        <div class="hair-4" id="hair-shaggy-bangs-three"></div>
+        <div class="hair-4" id="hair-shaggy-sideburn-left"></div>
+        <div class="hair-4" id="hair-shaggy-sideburn-right"></div>
+      </div>
+
+      <div class="hair-5" id="hair-long">
+        <div class="hair-5" id="hair-long-bangs-one"></div>
+        <div class="hair-5" id="hair-long-bangs-two"></div>
+        <div class="hair-5" id="hair-long-bangs-three"></div>
+        <div class="hair-5" id="hair-long-sideburn-left"></div>
+        <div class="hair-5" id="hair-long-sideburn-right"></div>
+      </div>
+
+      <div class="hair-6" id="hair-bangs">
+        <div class="hair-6" id="hair-bangs-bangs"></div>
+        <div class="hair-6" id="hair-bangs-sideburn-left"></div>
+        <div class="hair-6" id="hair-bangs-sideburn-right"></div>
+      </div>
+
+      <div class="hair-7" id="hair-bun">
+        <div class="hair-7" id="hair-bun-bun"></div>
+        <div class="hair-7" id="hair-bun-bangs-one"></div>
+        <div class="hair-7" id="hair-bun-bangs-two"></div>
+        <div class="hair-7" id="hair-bun-sideburn-left"></div>
+        <div class="hair-7" id="hair-bun-sideburn-right"></div>
+      </div>
+      
+      <div class="face-1" id="face-one"></div>
+      <div class="face-2" id="face-two"></div>
+      <div class="face-3" id="face-three"></div>
+      <div class="face-4" id="face-four"></div>
+      <div class="face-5" id="face-five"></div>
+      <div class="face-6" id="face-six"></div>
+      <div class="face-7" id="face-seven"></div>
+
+      <div class="face-features" id="face-features">
+
+        <div class="glasses-1" id="glasses-square">
+          <div class="glasses-1" id="glasses-square-left"></div>
+          <div class="glasses-1" id="glasses-square-right"></div>
+          <div class="glasses-1 bridge" id="glasses-square-bridge"></div>
+        </div>
+
+        <div class="glasses-2" id="glasses-round">
+          <div class="glasses-2" id="glasses-round-left"></div>
+          <div class="glasses-2" id="glasses-round-right"></div>
+          <div class="glasses-2 bridge" id="glasses-round-bridge"></div>
+        </div>
+
+        <div class="glasses-3" id="glasses-cateye">
+          <div class="glasses-3" id="glasses-cateye-left"></div>
+          <div class="glasses-3" id="glasses-cateye-right"></div>
+          <div class="glasses-3 bridge" id="glasses-cateye-bridge"></div>
+        </div>
+        
+        <div class="glasses-4" id="glasses-readers">
+          <div class="glasses-4" id="glasses-readers-left"></div>
+          <div class="glasses-4" id="glasses-readers-right"></div>
+          <div class="glasses-4 bridge" id="glasses-readers-bridge"></div>
+        </div>
+
+        <div class="glasses-5" id="sunglasses-square">
+          <div class="glasses-5" id="sunglasses-square-left"></div>
+          <div class="glasses-5" id="sunglasses-square-right"></div>
+          <div class="glasses-5 bridge" id="sunglasses-square-bridge"></div>
+        </div>
+
+        <div class="glasses-6" id="sunglasses-round">
+          <div class="glasses-6" id="sunglasses-round-left"></div>
+          <div class="glasses-6" id="sunglasses-round-right"></div>
+          <div class="glasses-6 bridge" id="sunglasses-round-bridge"></div>
+        </div>
+
+        <div class="glasses-7" id="no-glasses"></div>
+
+        <div class="eyebrows-1" id="eyebrows-one-left"></div>
+        <div class="eyebrows-1" id="eyebrows-one-right"></div>
+        <div class="eyebrows-2" id="eyebrows-two-left"></div>
+        <div class="eyebrows-2" id="eyebrows-two-right"></div>
+        <div class="eyebrows-3" id="eyebrows-three-left"></div>
+        <div class="eyebrows-3" id="eyebrows-three-right"></div>
+        <div class="eyebrows-4" id="eyebrows-four-left"></div>
+        <div class="eyebrows-4" id="eyebrows-four-right"></div>
+        <div class="eyebrows-5" id="eyebrows-five-left"></div>
+        <div class="eyebrows-5" id="eyebrows-five-right"></div>
+        <div class="eyebrows-6" id="eyebrows-six-left"></div>
+        <div class="eyebrows-6" id="eyebrows-six-right"></div>
+        <div class="eyebrows-7" id="eyebrows-seven-left">
+          <div class="eyebrows-7" id="eyebrows-seven-left-point"></div>
+        </div>
+        <div class="eyebrows-7" id="eyebrows-seven-right">
+          <div class="eyebrows-7" id="eyebrows-seven-right-point"></div>
+        </div>
+        
+        <div class="eyes-1" id="eyes-one-left"></div>
+        <div class="eyes-1" id="eyes-one-right"></div>
+
+        <div class="eyes-2 sclera" id="eyes-two-left">
+          <div class="eyes-2" id="eyes-two-left-pupil"></div>
+        </div>
+        <div class="eyes-2 sclera" id="eyes-two-right">
+          <div class="eyes-2" id="eyes-two-right-pupil"></div>
+        </div>
+
+        <div class="eyes-3" id="eyes-three-left">
+          <div class="eyes-3" id="eyes-three-left-eyelash"></div>
+          <div class="eyes" id="eyes-three-left-pupil"></div>
+        </div>
+        <div class="eyes-3" id="eyes-three-right">
+          <div class="eyes-3" id="eyes-three-right-eyelash"></div>
+          <div class="eyes" id="eyes-three-right-pupil"></div>
+        </div>
+
+        <div class="eyes-4 sclera" id="eyes-four-left">
+          <div class="eyes-4" id="eyes-four-left-pupil"></div>
+        </div>
+        <div class="eyes-4 sclera" id="eyes-four-right">
+          <div class="eyes-4" id="eyes-four-right-pupil"></div>
+        </div>
+
+        <div class="eyes-5 sclera" id="eyes-five-left">
+          <div class="eyes-5" id="eyes-five-left-pupil"></div>
+        </div>
+        <div class="eyes-5 sclera" id="eyes-five-right">
+          <div class="eyes-5" id="eyes-five-right-pupil"></div>
+        </div>
+
+        <div class="eyes-6" id="eyes-six-left">
+          <div class="eyes" id="eyes-six-left-pupil"></div>
+        </div>
+        <div class="eyes-6" id="eyes-six-right">
+          <div class="eyes" id="eyes-six-right-pupil"></div>
+        </div>
+
+        <div class="eyes-7" id="eyes-seven-left">
+          <div class="eyes-7" id="eyes-seven-left-eyelash-one"></div>
+          <div class="eyes-7" id="eyes-seven-left-eyelash-two"></div>
+          <div class="eyes" id="eyes-seven-left-pupil"></div>
+        </div>
+        <div class="eyes-7" id="eyes-seven-right">
+          <div class="eyes-7" id="eyes-seven-right-eyelash-one"></div>
+          <div class="eyes-7" id="eyes-seven-right-eyelash-two"></div>
+          <div class="eyes" id="eyes-seven-right-pupil"></div>
+        </div>
+        
+        <div class="ears-1 ears" id="ears-one-left"></div>
+        <div class="ears-1 ears" id="ears-one-right"></div>
+        <div class="ears-2 ears" id="ears-two-left"></div>
+        <div class="ears-2 ears" id="ears-two-right"></div>
+        <div class="ears-3 ears" id="ears-three-left"></div>
+        <div class="ears-3 ears" id="ears-three-right"></div>
+        <div class="ears-4 ears" id="ears-four-left"></div>
+        <div class="ears-4 ears" id="ears-four-right"></div>
+        <div class="ears-5 ears" id="ears-five-left"></div>
+        <div class="ears-5 ears" id="ears-five-right"></div>
+        <div class="ears-6 ears" id="ears-six-left"></div>
+        <div class="ears-6 ears" id="ears-six-right"></div>
+        <div class="ears-7 ears" id="ears-seven-left"></div>
+        <div class="ears-7 ears" id="ears-seven-right"></div>
+
+        <div class="earrings-1 earrings" id="earrings-one"></div>
+        <div class="earrings-2 earrings" id="earrings-two-left"></div>
+        <div class="earrings-2 earrings" id="earrings-two-right"></div>
+        <div class="earrings-3 earrings" id="earrings-three-left"></div>
+        <div class="earrings-3 earrings" id="earrings-three-right"></div>
+
+        <div class="earrings-4 earrings" id="earrings-four-left">
+          <div class="earrings-4 earrings" id="earrings-four-left-pearl-one"></div>
+          <div class="earrings-4 earrings" id="earrings-four-left-pearl-two"></div>
+        </div>
+        <div class="earrings-4 earrings" id="earrings-four-right">
+          <div class="earrings-4 earrings" id="earrings-four-right-pearl-one"></div>
+          <div class="earrings-4 earrings" id="earrings-four-right-pearl-two"></div>
+        </div>
+
+        <div class="earrings-5 earrings-gauge" id="earrings-five-left">
+          <div class="earrings-5 earrings-hoop" id="earrings-five-left-helix"></div>
+        </div>
+        <div class="earrings-5 earrings-gauge" id="earrings-five-right">
+          <div class="earrings-5 earrings-hoop" id="earrings-five-right-helix"></div>
+        </div>
+
+        <div class="earrings-6 earrings" id="earrings-six-left">
+          <div class="earrings-6 earrings" id="earrings-six-left-diamond"></div>
+        </div>
+        <div class="earrings-6 earrings" id="earrings-six-right">
+          <div class="earrings-6 earrings" id="earrings-six-right-diamond"></div>
+        </div>
+
+        <div class="earrings-7 earrings" id="earrings-seven-left">
+          <div class="earrings-7 earrings" id="earrings-seven-left-contour"></div>
+        </div>
+        <div class="earrings-7 earrings" id="earrings-seven-right">
+          <div class="earrings-7 earrings" id="earrings-seven-right-contour"></div>
+        </div>
+        
+        <div class="nose-1" id="nose-one"></div>
+        <div class="nose-2" id="nose-two"></div>
+        <div class="nose-3" id="nose-three"></div>
+        <div class="nose-4" id="nose-four">
+          <div class="nose-4" id="nose-four-bulb"></div>
+        </div>
+        <div class="nose-5" id="nose-five"></div>
+        <div class="nose-6" id="nose-six"></div>
+        <div class="nose-7" id="nose-seven">
+          <div class="nose-7" id="nose-seven-left-nostril"></div>
+          <div class="nose-7" id="nose-seven-right-nostril"></div>
+        </div>
+        
+        <div class="mouth-1" id="mouth-one"></div>
+
+        <div class="mouth-2" id="mouth-two">
+          <div class="mouth-2 tongue" id="mouth-two-tongue"></div>
+        </div>
+
+        <div class="mouth-3" id="mouth-three">
+          <div class="mouth-3" id="mouth-three-lip-one"></div>
+          <div class="mouth-3" id="mouth-three-lip-two"></div>
+        </div>
+
+        <div class="mouth-4" id="mouth-four">
+          <div class="mouth-4 teeth" id="mouth-four-teeth"></div>
+        </div>
+
+        <div class="mouth-5" id="mouth-five">
+          <div class="mouth-5 teeth" id="mouth-five-left-tooth"></div>
+          <div class="mouth-5 teeth" id="mouth-five-right-tooth"></div>
+        </div>
+
+        <div class="mouth-6" id="mouth-six">
+          <div class="mouth-6 tongue" id="mouth-six-tongue"></div>
+          <div class="mouth-6 teeth" id="mouth-six-teeth"></div>
+        </div>
+
+        <div class="mouth-7" id="mouth-seven"></div>
+        
+        <div class="facial-hair-1" id="mustache-left"></div>
+        <div class="facial-hair-1" id="mustache-right"></div>
+
+
+        <div class="facial-hair-2" id="beard">
+          <div class="facial-hair-2" id="beard-sideburn-left"></div>
+          <div class="facial-hair-2" id="beard-sideburn-right"></div>
+        </div>
+
+        <div class="facial-hair-3" id="goatee">
+          <div class="facial-hair-3" id="goatee-mustache"></div>
+          <div class="facial-hair-3" id="goatee-left"></div>
+          <div class="facial-hair-3" id="goatee-right"></div>
+        </div>
+
+        <div class="facial-hair-4" id="van-dyke"></div>
+        <div class="facial-hair-4" id="van-dyke-left-mustache"></div>
+        <div class="facial-hair-4" id="van-dyke-right-mustache"></div>
+        
+        <div class="facial-hair-5" id="lamb-chops-left"></div>
+        <div class="facial-hair-5" id="lamb-chops-right"></div>
+        <div class="facial-hair-5" id="lamb-chops-left-mustache"></div>
+        <div class="facial-hair-5" id="lamb-chops-right-mustache"></div>
+
+        <div class="facial-hair-6" id="cowboy-mustache-left">
+          <div class="facial-hair-6" id="cowboy-mustache-left-handle"></div>
+        </div>
+        <div class="facial-hair-6" id="cowboy-mustache-right">
+          <div class="facial-hair-6" id="cowboy-mustache-right-handle"></div>
+        </div>
+
+        <div class="facial-hair-7" id="no-facial-hair"></div>
+        
+        <div class="blush-1" id="blush-one-left"></div> 
+        <div class="blush-1" id="blush-one-right"></div>
+        <div class="blush-2" id="blush-two-left"></div> 
+        <div class="blush-2" id="blush-two-right"></div>
+        <div class="blush-3" id="blush-three-left"></div> 
+        <div class="blush-3" id="blush-three-right"></div>
+        <div class="blush-4" id="blush-four-left"></div> 
+        <div class="blush-4" id="blush-four-right"></div>
+        <div class="blush-5" id="blush-five-left"></div> 
+        <div class="blush-5" id="blush-five-right"></div>
+        <div class="blush-6" id="blush-six-left"></div> 
+        <div class="blush-6" id="blush-six-right"></div>
+        <div class="blush-7" id="blush-seven-left"></div> 
+        <div class="blush-7" id="blush-seven-right"></div>
+      </div>
+    </div>
+    
+    <div class="neck" id="neck"></div>
+
+    <div class="necklace-1" id="necklace-one"></div>
+    
+    <div class="necklace-2" id="necklace-two">
+      <div class="necklace-2 left-necklace" id="necklace-two-left"></div>
+      <div class="necklace-2 right-necklace" id="necklace-two-right"></div>
+    </div>
+
+    <div class="necklace-3 necklace" id="necklace-three">
+      <div class="necklace-3 necklace" id="necklace-three-inner"></div>
+    </div>
+
+    <div class="necklace-4 necklace" id="necklace-four">
+      <div class="necklace-4 necklace-shape" id="necklace-four-rectangle"></div>
+      <div class="necklace-4 necklace-shape" id="necklace-four-circle"></div>
+    </div>
+
+    <div class="necklace-5" id="necklace-five">
+      <div class="necklace-5 left-necklace" id="necklace-five-left"></div>
+      <div class="necklace-5 right-necklace" id="necklace-five-right"></div>
+      <div class="necklace-5 necklace-shape" id="necklace-five-rectangle"></div>
+      <div class="necklace-5 necklace-shape" id="necklace-five-diamond"></div>
+    </div>
+
+    <div class="necklace-6" id="necklace-six">
+      <div class="necklace-6 left-necklace" id="necklace-six-left"></div>
+      <div class="necklace-6 right-necklace" id="necklace-six-right"></div>
+      <div class="necklace-6 necklace-shape" id="necklace-six-rectangle"></div>
+      <div class="necklace-6 necklace-triangle" id="necklace-six-triangle-one"></div>
+      <div class="necklace-6 necklace-triangle" id="necklace-six-triangle-two"></div>
+    </div>
+
+    <div class="necklace-7" id="necklace-seven">
+      <div class="necklace-7 left-necklace" id="necklace-seven-left"></div>
+      <div class="necklace-7 right-necklace" id="necklace-seven-right"></div>
+      <div class="necklace-7 necklace-shape" id="necklace-seven-rectangle"></div>
+      <div class="necklace-7 necklace-shape" id="necklace-seven-heart-left"></div>
+      <div class="necklace-7 necklace-shape" id="necklace-seven-heart-right"></div>
+    </div>
+    
+    <div class="body-1" id="solid"></div>
+    <div class="body-2" id="stripes"></div>
+    <div class="body-3" id="gradient"></div>
+
+    <div class="body-4 jacket" id="jacket-collar"></div>
+    <div class="body-4" id="jacket">
+      <div class="body-4 jacket" id="jacket-left"></div>
+      <div class="body-4 jacket" id="jacket-right"></div>
+      <div class="body-4 jacket" id="jacket-left-pocket"></div>
+      <div class="body-4 jacket" id="jacket-right-pocket"></div>
+      <div class="body-4 jacket" id="jacket-left-shoulder-loop"></div>
+      <div class="body-4 jacket" id="jacket-right-shoulder-loop"></div>
+      <div class="body-4 jacket" id="jacket-left-top-lapel"></div>
+      <div class="body-4 jacket" id="jacket-right-top-lapel"></div>
+      <div class="body-4 jacket" id="jacket-left-bottom-lapel"></div>
+      <div class="body-4 jacket" id="jacket-right-bottom-lapel"></div>
+    </div>
+
+    <div class="body-5" id="small-boobs">
+      <div class="body-5 boobs" id="small-boobs-left"></div>
+      <div class="body-5 boobs" id="small-boobs-right"></div>
+    </div>
+
+    <div class="body-6" id="big-boobs">
+      <div class="body-6 boobs" id="big-boobs-left"></div>
+      <div class="body-6 boobs" id="big-boobs-right"></div>
+    </div>
+    
+    <div class="body-7" id="cape">
+      <div class="body-7 cape" id="cape-left"></div>
+      <div class="body-7 cape" id="cape-right"></div>
+      <div class="body-7 cape" id="cape-left-collar"></div>
+      <div class="body-7 cape" id="cape-right-collar"></div>
+      <div class="body-7 cape" id="cape-button"></div>
+    </div>
+  </div>
+  <script src="./code.js"></script>
+</body>
+</html>
