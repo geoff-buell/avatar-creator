@@ -1,9 +1,9 @@
-/* Version One */
+/* Version Two */
 body {
   margin: auto;
   margin-top: 65vh;
   width: 450px;
-  background: #cfdef3;
+  background: #50b6bb;
   font-family: 'Cutive Mono', monospace;
   color: #263238;
 }
@@ -19,7 +19,7 @@ body {
   font-family: 'Bungee Shade', cursive;
   /* font-family: 'Bungee Outline', cursive; */
   font-size: 3rem;
-  color: #6E64E7;
+  color: #184C51;
 }
 
 @media (max-height: 665px) {
@@ -43,25 +43,12 @@ select {
   font-family: 'Cutive Mono', monospace;
   font-size: 1.1rem;
   border-radius: 4px;
-  margin-right: 10px;
+  margin-bottom: 20px;
   padding: 2px 0 2px 3px;
-  opacity: 70%;
-}
-
-button {
-  font-family: 'Cutive Mono', monospace;
-  font-size: 1.1rem;
-  border-radius: 4px;
-  border: none;
-  padding: 4px 10px 4px 10px;
-  background: #6E64E7;
-  color: #FFF;
-}
-
-.output {
-  text-align: center;
-  font-style: italic;
-  color: #6E64E7;
+  background: none;
+  border: 2px solid #184C51;
+  color: #184C51;
+  outline: none;
 }
 
 #instructions-one {
@@ -82,19 +69,19 @@ button {
   margin-top: 3px;
   width: 45px;
   height: 30px;
-  color: #6E64E7;
-  border: 1px solid #6E64E7;
+  color: #184C51;
+  border: 1px solid #184C51;
   border-radius: 5px;
   animation-name: appear;
   animation-duration: 5s;
 }
 
-/* .arrow:hover {
+.arrow:hover {
   transition: ease-in 300ms;
-  background-color: #6E64E7;
+  background-color: #184C51;
   color: #FFF;
   cursor: pointer;
-} */
+}
 
 @keyframes appear{
   0% {

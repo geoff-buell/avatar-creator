@@ -1,26 +1,16 @@
-// Version One
+// Version Two
 document.addEventListener('DOMContentLoaded', () => {
 
-  document.getElementById('select-btn').addEventListener('click', getOption);
+  document.getElementById('features').addEventListener('change', getOption);
 
   let features, featuresOption, optionNumber, elements;
 
   // Grabs feature to be customized
-  function getOption(e) {
-    e.preventDefault(); // Don't want button to submit
+  function getOption() {
     features = document.getElementById('features');
     featuresOption = features.options[features.selectedIndex].value;
     optionNumber = 1;
-    elements = document.querySelectorAll('.'+featuresOption+'-'+optionNumber);
-    const output = document.querySelector('.output');
-    // Corrects output to proper format/grammar
-    if (featuresOption.charAt(featuresOption.length - 1) === 's') {
-      output.innerHTML = featuresOption.charAt(0).toUpperCase() +
-      featuresOption.slice(1) + ' are currently selected.';
-    } else {
-      output.innerHTML = featuresOption.charAt(0).toUpperCase() +
-      featuresOption.slice(1) + ' is currently selected.';
-    }
+    elements = document.querySelectorAll(`.${featuresOption}-${optionNumber}`);
   }
   // Setting up so user can click arrow divs or just use arrow keys
   // const upArrow = document.getElementById('up-arrow');
@@ -33,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // leftArrow.addEventListener('click', clickChanges);
   // rightArrow.addEventListener('click', clickChanges);
 
-  // // const arrows = document.querySelectorAll('.arrow');
-  // // for (i = 0; i < arrows.length; i++) {
-  // //   arrows[i].addEventListener('click', clickChanges);
-  // // }
+  // const arrows = document.querySelectorAll('.arrow');
+  // for (i = 0; i < arrows.length; i++) {
+  //   arrows[i].addEventListener('click', clickChanges);
+  // }
 
   // function clickChanges() {
   //   switch(arrowsArray) {
@@ -46,16 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
   //   }
   // }
 
-  document.addEventListener('keyup', keyChanges);
-
+  document.addEventListener('keydown', keyChanges);
   // This controls looping through options
-  // 2 things I want to change: first is setting up code so it doesn't matter how many
-  // options or colors there are. Second is stopping the glitch when going back to a 
-  // feature after you've already messed with it.
   function keyChanges(e) {
     switch(e.keyCode) {
       // First 2 - up and down - change colors
       case 38:
+        e.preventDefault();
         if (colorsIndex < 12) { // colorIndex is defined under the colors object
           colorsIndex++;
         } else if (colorsIndex === 12) {
@@ -65,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 40:
+        e.preventDefault();
         if (colorsIndex > 0) {
           colorsIndex--;
         } else if (colorsIndex === 0) {
@@ -80,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (optionNumber === 7) {
           optionNumber = 1;
         }  
-        elements = document.querySelectorAll('.'+featuresOption+'-'+optionNumber);
+        elements = document.querySelectorAll(`.${featuresOption}-${optionNumber}`);
         elements.forEach(div => div.style.display = 'block');
         changeColor();
         break;
@@ -92,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (optionNumber === 1) {
           optionNumber = 7;
         }  
-        elements = document.querySelectorAll('.'+featuresOption+'-'+optionNumber);
+        elements = document.querySelectorAll(`.${featuresOption}-${optionNumber}`);
         elements.forEach(div => div.style.display = 'block');
         changeColor();
         break;
