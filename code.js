@@ -12,30 +12,98 @@ document.addEventListener('DOMContentLoaded', () => {
     optionNumber = 1;
     elements = document.querySelectorAll(`.${featuresOption}-${optionNumber}`);
   }
-  // Setting up so user can click arrow divs or just use arrow keys
-  // const upArrow = document.getElementById('up-arrow');
-  // const downArrow = document.getElementById('down-arrow');
-  // const leftArrow = document.getElementById('left-arrow');
-  // const rightArrow = document.getElementById('right-arrow');
 
-  // upArrow.addEventListener('click', clickChanges); 
-  // downArrow.addEventListener('click', clickChanges);
-  // leftArrow.addEventListener('click', clickChanges);
-  // rightArrow.addEventListener('click', clickChanges);
+  // Setting up so user can click arrows
+  const upArrow = document.getElementById('up-arrow');
+  const downArrow = document.getElementById('down-arrow');
+  const leftArrow = document.getElementById('left-arrow');
+  const rightArrow = document.getElementById('right-arrow');
 
-  // const arrows = document.querySelectorAll('.arrow');
-  // for (i = 0; i < arrows.length; i++) {
-  //   arrows[i].addEventListener('click', clickChanges);
-  // }
+  upArrow.addEventListener('mouseenter', () => {
+    upArrow.style.background = '#184C51';
+    upArrow.style.color = '#FFF';
+  });
+  upArrow.addEventListener('mouseleave', () => {
+    upArrow.style.background = 'none';
+    upArrow.style.color = '#184C51';
+  });
+  upArrow.addEventListener('click', () => {
+    if (colorsIndex < 12) { // colorIndex is defined under the colors object
+      colorsIndex++;
+    } else if (colorsIndex === 12) {
+      colorsIndex = 0;
+    } 
+    changeColor();
+  }); 
 
-  // function clickChanges() {
-  //   switch(arrowsArray) {
-  //     case [0]:
-  //       console.log('huh');
-  //       break;
-  //   }
-  // }
+  downArrow.addEventListener('mouseenter', () => {
+    downArrow.style.background = '#184C51';
+    downArrow.style.color = '#FFF';
+  });
+  downArrow.addEventListener('mouseleave', () => {
+    downArrow.style.background = 'none';
+    downArrow.style.color = '#184C51';
+  });
+  downArrow.addEventListener('click', () => {
+    if (colorsIndex > 0) {
+      colorsIndex--;
+    } else if (colorsIndex === 0) {
+      colorsIndex = 12;
+    }
+    changeColor();
+  });
 
+  rightArrow.addEventListener('mouseenter', () => {
+    rightArrow.style.background = '#184C51';
+    rightArrow.style.color = '#FFF';
+  });
+  rightArrow.addEventListener('mouseleave', () => {
+    rightArrow.style.background = 'none';
+    rightArrow.style.color = '#184C51';
+  });
+  rightArrow.addEventListener('click', () => {
+    elements.forEach(div => div.style.display = 'none');
+    if (optionNumber < 7) {
+      optionNumber++;
+    } else if (optionNumber === 7) {
+      optionNumber = 1;
+    }  
+    elements = document.querySelectorAll(`.${featuresOption}-${optionNumber}`);
+    elements.forEach(div => div.style.display = 'block');
+    changeColor();
+  });
+
+  leftArrow.addEventListener('mouseenter', () => {
+    leftArrow.style.background = '#184C51';
+    leftArrow.style.color = '#FFF';
+  });
+  leftArrow.addEventListener('mouseleave', () => {
+    leftArrow.style.background = 'none';
+    leftArrow.style.color = '#184C51';
+  });
+  leftArrow.addEventListener('click', () => {
+    elements.forEach(div => div.style.display = 'none');
+    if (optionNumber > 1) {
+      optionNumber--;
+    } else if (optionNumber === 1) {
+      optionNumber = 7;
+    }  
+    elements = document.querySelectorAll(`.${featuresOption}-${optionNumber}`);
+    elements.forEach(div => div.style.display = 'block');
+    changeColor();
+  });
+
+  // Highlights arrow btns on screen when using arrow keys
+  function highlight(obj){
+    obj.style.background = '#184C51';
+    obj.style.color = '#FFF';
+    setTimeout(function(){
+        obj.style.background = 'none';
+        obj.style.color = '#184C51';
+    }, 150);
+  }
+  
+  // Setting up so user can use keyboard
   document.addEventListener('keydown', keyChanges);
   // This controls looping through options
   function keyChanges(e) {
@@ -43,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // First 2 - up and down - change colors
       case 38:
         e.preventDefault();
+        highlight(upArrow);
         if (colorsIndex < 12) { // colorIndex is defined under the colors object
           colorsIndex++;
         } else if (colorsIndex === 12) {
@@ -53,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 40:
         e.preventDefault();
+        highlight(downArrow);
         if (colorsIndex > 0) {
           colorsIndex--;
         } else if (colorsIndex === 0) {
@@ -62,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       // Second 2 - left and right - change styles  
       case 39:
+        highlight(rightArrow);
         elements.forEach(div => div.style.display = 'none');
         if (optionNumber < 7) {
           optionNumber++;
@@ -74,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 37:
+        highlight(leftArrow);
         elements.forEach(div => div.style.display = 'none');
         if (optionNumber > 1) {
           optionNumber--;

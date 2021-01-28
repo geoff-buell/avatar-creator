@@ -1,28 +1,29 @@
 /* Version Two */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  margin: auto;
-  margin-top: 65vh;
-  width: 450px;
-  background: #50b6bb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  background: #B0BEC5;
   font-family: 'Cutive Mono', monospace;
-  color: #263238;
+  color: #184C51;
+  padding: 30px;
 }
 
 #title {
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-  left: 0;
-  right: 0;
-  top: 35px;
   font-family: 'Bungee Shade', cursive;
-  /* font-family: 'Bungee Outline', cursive; */
   font-size: 3rem;
   color: #184C51;
 }
 
-@media (max-height: 665px) {
+@media (max-height: 600px) {
   #title {
     display: none;
   }
@@ -74,13 +75,6 @@ select {
   border-radius: 5px;
   animation-name: appear;
   animation-duration: 5s;
-}
-
-.arrow:hover {
-  transition: ease-in 300ms;
-  background-color: #184C51;
-  color: #FFF;
-  cursor: pointer;
 }
 
 @keyframes appear{
@@ -194,15 +188,11 @@ select {
 }
 
 .circle {
-  position: absolute;
-  margin: auto;
-  top: 0;
-  bottom: 120px;
-  right: 0;
-  left: 0;
+  position: relative;
+  margin: 25px;
   width: 250px;
   height: 250px;
-  background: #E1F5FE;
+  background: none;
   border-radius: 50%;
   clip-path: circle(125px at center);
 }
