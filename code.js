@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
       // Second 2 - left and right - change styles  
       case 39:
+        e.preventDefault();
         highlight(rightArrow);
         elements.forEach(div => div.style.display = 'none');
         if (optionNumber < 7) {
@@ -145,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         break;
 
       case 37:
+        e.preventDefault();
         highlight(leftArrow);
         elements.forEach(div => div.style.display = 'none');
         if (optionNumber > 1) {
